@@ -73,6 +73,7 @@ with open('input.txt') as f_in1:
                     times.update({'auto_3': queue_3})
                 else:
                     pass
+
             if int(litters) % 10 == 0:
                 refueling_time = int(int(litters) / 10 + random.randint(-1, 1))
                 a = times.get('auto_1')
@@ -82,6 +83,20 @@ with open('input.txt') as f_in1:
                         a.remove(a[0])
                         b = {'auto_1': a}
                         times.update(b)
+                c = times.get('auto_2')
+                print(times)
+                for i in c:
+                    if enother_time - c[0] >= refueling_time:
+                        c.remove(c[0])
+                        d = {'auto_2': c}
+                        times.update(d)
+                e = times.get('auto_3')
+                print(times)
+                for i in e:
+                    if enother_time - e[0] >= refueling_time:
+                        e.remove(e[0])
+                        f = {'auto_3': e}
+                        times.update(f)
             elif int(litters) % 10 != 0:
                 refueling_time = int((int(litters) // 10 + 1) + random.randint(-1, 1))
 
