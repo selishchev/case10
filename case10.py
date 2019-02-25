@@ -81,14 +81,14 @@ with open('input.txt') as f_in1:
             if int(litters) % 10 == 0:
                 refueling_time = int(int(litters) / 10 + random.randint(-1, 1))
                 a = times.get('auto_1')
-                if a not in None:
+                if a is not None:
                     for i in a:
                         if enother_time - a[0] >= refueling_time:
                             a.remove(a[0])
                             b = {'auto_1': a}
                             times.update(b)
                 c = times.get('auto_2')
-                if c not in None:
+                if c is not None:
                     for i in c:
                         if enother_time - c[0] >= refueling_time:
                             c.remove(c[0])
@@ -96,7 +96,7 @@ with open('input.txt') as f_in1:
                             times.update(d)
 
                 e = times.get('auto_3')
-                if e not in None:
+                if e is not None:
                     for i in e:
                         if enother_time - e[0] >= refueling_time:
                             e.remove(e[0])
@@ -105,7 +105,7 @@ with open('input.txt') as f_in1:
             elif int(litters) % 10 != 0:
                 refueling_time = int((int(litters) // 10 + 1) + random.randint(-1, 1))
                 a = times.get('auto_1')
-                if a not in None:
+                if a is not None:
                     for i in a:
                         if enother_time - a[0] >= refueling_time:
                             a.remove(a[0])
@@ -113,7 +113,7 @@ with open('input.txt') as f_in1:
                             times.update(b)
 
                 c = times.get('auto_2')
-                if c not in None:
+                if c is not None:
                     for i in c:
                         if enother_time - c[0] >= refueling_time:
                             c.remove(c[0])
@@ -121,7 +121,7 @@ with open('input.txt') as f_in1:
                             times.update(d)
 
                 e = times.get('auto_3')
-                if e not in None:
+                if e is not None:
                     for i in e:
                         if enother_time - e[0] >= refueling_time:
                             e.remove(e[0])
