@@ -78,7 +78,7 @@ with open('input.txt') as f_in1:
                 a = times.get('auto_1')
                 print(times)
                 for i in a:
-                    if enother_time - i[0] >= refueling_time:
+                    if enother_time - a[0] >= refueling_time:
                         a.remove(a[0])
                         b = {'auto_1': a}
                         times.update(b)
