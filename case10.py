@@ -74,32 +74,60 @@ with open('input.txt') as f_in1:
                 else:
                     pass
 
+
+
+
+
             if int(litters) % 10 == 0:
                 refueling_time = int(int(litters) / 10 + random.randint(-1, 1))
                 a = times.get('auto_1')
-                print(times)
-                for i in a:
-                    if enother_time - a[0] >= refueling_time:
-                        a.remove(a[0])
-                        b = {'auto_1': a}
-                        times.update(b)
+                if a not in None:
+                    for i in a:
+                        if enother_time - a[0] >= refueling_time:
+                            a.remove(a[0])
+                            b = {'auto_1': a}
+                            times.update(b)
                 c = times.get('auto_2')
-                print(times)
-                for i in c:
-                    if enother_time - c[0] >= refueling_time:
-                        c.remove(c[0])
-                        d = {'auto_2': c}
-                        times.update(d)
+                if c not in None:
+                    for i in c:
+                        if enother_time - c[0] >= refueling_time:
+                            c.remove(c[0])
+                            d = {'auto_2': c}
+                            times.update(d)
+
                 e = times.get('auto_3')
-                print(times)
-                for i in e:
-                    if enother_time - e[0] >= refueling_time:
-                        e.remove(e[0])
-                        f = {'auto_3': e}
-                        times.update(f)
+                if e not in None:
+                    for i in e:
+                        if enother_time - e[0] >= refueling_time:
+                            e.remove(e[0])
+                            f = {'auto_3': e}
+                            times.update(f)
             elif int(litters) % 10 != 0:
                 refueling_time = int((int(litters) // 10 + 1) + random.randint(-1, 1))
+                a = times.get('auto_1')
+                if a not in None:
+                    for i in a:
+                        if enother_time - a[0] >= refueling_time:
+                            a.remove(a[0])
+                            b = {'auto_1': a}
+                            times.update(b)
 
+                c = times.get('auto_2')
+                if c not in None:
+                    for i in c:
+                        if enother_time - c[0] >= refueling_time:
+                            c.remove(c[0])
+                            d = {'auto_2': c}
+                            times.update(d)
+
+                e = times.get('auto_3')
+                if e not in None:
+                    for i in e:
+                        if enother_time - e[0] >= refueling_time:
+                            e.remove(e[0])
+                            f = {'auto_3': e}
+                            times.update(f)
+                print(times)
             with open('azs1.txt') as f_in2:
                 for line2 in f_in2:
                     f_out1.write(line2)
